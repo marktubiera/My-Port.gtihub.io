@@ -1,80 +1,107 @@
 /* styles.css */
 body {
-    font-family: 'Calibri', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2e2e2e;
-    color: #ffffff;
+    box-sizing: border-box;
+    background-color: #d3d8de; /* Fallback color */
+    background-image: url('https://images.unsplash.com/photo-1498535404252-2df80a5d25ea'); /* Background image URL */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
 }
 
-.top-bar {
-    background-color: #1c3a57;
-    padding: 10px 0;
+header {
+    background-color: rgba(42, 81, 88, 0.8); /* Semi-transparent background for readability */
+    color: white;
+    padding: 1em 0;
     text-align: center;
+    position: relative;
 }
 
-.nav-links a {
-    color: #ffffff;
-    margin: 0 15px;
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0.5em 0 1em;
+}
+
+.menu-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav a {
+    color: white;
     text-decoration: none;
-    transition: transform 0.3s, color 0.3s, font-size 0.3s;
+    margin: 0 1em;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.nav-links a:hover {
+nav a:hover, nav a:focus {
     font-size: 1.2em;
-    color: #ffcc00;
-    transform: rotate(10deg);
+    border-bottom: 3px solid #ff5722; /* Highlight color */
 }
 
-.header-section {
+.learn-more {
+    display: inline-block;
+    margin-top: 1em;
+    color: #2a5158;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.learn-more:hover {
+    font-size: 1.1em;
+    color: #ff5722; /* Highlight color */
+}
+
+section {
+    padding: 2em;
+}
+
+h2 {
+    color: #2a5158;
+    border-bottom: 2px solid #2a5158;
+    padding-bottom: 0.5em;
+}
+
+.job {
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 2px solid #2a5158;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.job:hover {
+    border-color: #ff5722; /* Highlight color */
+    transform: scale(1.02);
+}
+
+footer {
+    background-color: #292123;
+    color: white;
     text-align: center;
-    padding: 50px 20px;
-    background-color: #1c3a57;
+    padding: 1em 0;
 }
 
-.header-section h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-.skills {
-    margin-top: 10px;
-    font-size: 1.2em;
-}
-
-.info-section, .education-socials, .footer {
-    padding: 20px;
-    margin: 10px;
-    background-color: #3c3c3c;
-}
-
-.skills h2, .education h2, .socials-section h2, .about h2, .contact-details h2 {
-    margin-top: 0;
-}
-
-.skills ul {
-    list-style: none;
+#skills ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.skills ul li {
-    background-color: #555;
-    padding: 10px;
-    margin: 5px 0;
-    transition: transform 0.3s, color 0.3s, font-size 0.3s;
+#skills ul li {
+    transition: all 0.3s ease;
 }
 
-.skills ul li:hover {
+#skills ul li:hover {
     font-size: 1.2em;
-    color: #ffcc00;
-    transform: rotate(10deg);
+    color: #2a5158;
 }
-
-.socials-section .social-icon {
-    width: 40px;
-    margin: 0 10px;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-.socials-section .social-icon:hover {
-    transform: scale(1.2

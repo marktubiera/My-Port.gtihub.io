@@ -1,10 +1,13 @@
 // scripts.js
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.querySelector('.menu-button');
+    menuButton.addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    });
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+    const learnMoreLink = document.querySelector('.learn-more');
+    learnMoreLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('all-experience').scrollIntoView({ behavior: 'smooth' });
     });
 });
